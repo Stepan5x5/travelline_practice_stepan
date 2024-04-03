@@ -12,4 +12,7 @@ public class Human : IRace
     public int Health { get; } = 100;
 
     public int Armor { get; } = 10;
+
+    public int Protection { get; } = 100;
+    public string PlayersName { get; } = "Человек";
 }

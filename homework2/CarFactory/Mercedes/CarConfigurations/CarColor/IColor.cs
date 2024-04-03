@@ -4,9 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FighterGame.Models.Weapons;
-public interface IWeapon
+namespace CarFactory.Mercedes.CarConfigurations.CarColor;
+public interface IColor
 {
-    int Damage { get; }
-    string Name { get; }
+    public string ColorName { get; }
 }

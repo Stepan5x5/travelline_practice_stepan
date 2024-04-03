@@ -8,4 +8,5 @@ namespace FighterGame.Models.Weapons;
 public class NoWeapon : IWeapon
 {
     public int Damage { get; } = 1;
+    public string Name { get; } = "Без оружия";
 }

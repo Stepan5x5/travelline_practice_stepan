@@ -8,8 +8,8 @@ public class Program
 {
     public static void Main()
     {
-        var firstFighter = new Fighter( "Jane", new Human() );
-        var secondFighter = new Fighter( "Viktor", new Human() );
+        var firstFighter = new Fighter( Console.ReadLine() , new Human() );
+        var secondFighter = new Fighter( Console.ReadLine() , new Human() );
 
         var master = new GameMaster();
         var winner = master.PlayAndGetWinner( firstFighter, secondFighter );

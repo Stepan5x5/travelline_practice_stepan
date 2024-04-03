@@ -8,4 +8,5 @@ namespace FighterGame.Models.Armors;
 public interface IArmor
 {
     int Armor { get; }
+    string Name { get; }
 }
