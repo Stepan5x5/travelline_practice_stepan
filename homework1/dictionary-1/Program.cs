@@ -1,10 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace dictionary
+namespace Dictionary
 {
     internal class Program
     {
@@ -14,13 +11,12 @@ namespace dictionary
             Dictionary<string, string> reverseDictionary = new Dictionary<string, string>();
             while ( true )
             {
-
                 Console.WriteLine( "Меню:" );
                 Console.WriteLine( "1. Добавить перевод " );
                 Console.WriteLine( "2. Удалить перевод " );
                 Console.WriteLine( "3. Изменить перевод " );
                 Console.WriteLine( "4. Перевести слово " );
-                Console.WriteLine( "5. Выйти из программы" );
+                Console.WriteLine( "5. Выйти из программы " );
 
                 Console.Write( "Выберите команду: " );
 
@@ -37,10 +33,10 @@ namespace dictionary
                         Translation.Change( interpreter );
                         break;
                     case "4":
-                        Translation.Prepared( interpreter, reverseDictionary );
+                        Translation.PreparedTranslation( interpreter, reverseDictionary );
                         break;
                     case "5":
-                        Console.WriteLine( "Программа завершена" );
+                        Console.WriteLine( "Программа завершена." );
                         return;
                     default:
                         Console.WriteLine( "Неизвестная команда." );

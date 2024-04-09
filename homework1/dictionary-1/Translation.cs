@@ -1,11 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Security.Cryptography.X509Certificates;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace dictionary
+namespace Dictionary
 {
     public class Translation
     {
@@ -17,7 +13,7 @@ namespace dictionary
             string converted = Console.ReadLine();
             interpreter[ word ] = converted;
             reverseDictionary[ converted ] = word;
-            Console.WriteLine( $"Ваш перевод добавлен. Результат: {word} - {converted}" );
+            Console.WriteLine( $"Ваш перевод добавлен. Результат: {word} - {converted}." );
         }
         public static void Remove( Dictionary<string, string> interpreter )
         {
@@ -26,7 +22,7 @@ namespace dictionary
             if ( interpreter.ContainsKey( word ) )
             {
                 interpreter.Remove( word );
-                Console.WriteLine( "Слово удалено" );
+                Console.WriteLine( "Слово удалено." );
             }
             else
             {
@@ -42,28 +38,30 @@ namespace dictionary
             if ( interpreter.ContainsKey( word ) )
             {
                 interpreter[ word ] = converted;
-                Console.WriteLine( $"Ваш перевод изменен. Результат: {word} - {converted}" );
+                Console.WriteLine( $"Ваш перевод изменен. Результат: {word} - {converted}." );
             }
             else
             {
                 Console.WriteLine( $"Слово {word} не найдено." );
             }
         }
-        public static void Prepared( Dictionary<string, string> interpreter, Dictionary<string, string> reverseDictionary )
+        public static void PreparedTranslation( Dictionary<string, string> interpreter, Dictionary<string, string> reverseDictionary )
         {
-            Console.WriteLine( "Напишите слово которое хотите перевести" );
-            string word = Console.ReadLine();
-            if ( interpreter.ContainsKey( word ) )
+            Console.WriteLine( "Напишите слово которое хотите перевести." );
+            string ReadWord = Console.ReadLine();
+            string translation;
+
+            if ( interpreter.TryGetValue( ReadWord, out translation ) )
             {
-                Console.WriteLine( $"Ваш перевод готов. Результат: {word} - {interpreter[ word ]}" );
+                Console.WriteLine( $"Ваш перевод готов. Результат: {ReadWord} - {translation}." );
             }
-            else if ( reverseDictionary.ContainsKey( word ) )
+            else if ( reverseDictionary.TryGetValue( ReadWord, out translation ) )
             {
-                Console.WriteLine( $"Обратный перевод слова готов. Результат: {word} - {reverseDictionary[ word ]}" );
+                Console.WriteLine( $"Обратный перевод слова готов. Результат: {ReadWord} - {translation}." );
             }
             else
             {
-                Console.WriteLine( $"Слово {word} не найдено." );
+                Console.WriteLine( $"Слово {ReadWord} не найдено." );
             }
         }
     }
