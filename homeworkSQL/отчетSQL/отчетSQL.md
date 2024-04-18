@@ -219,4 +219,4 @@ VALUES
 
 6\. Диаграмма нашей DB.
 
-![](Aspose.Words.a195013c-214d-430b-8255-45fc3829d4a1.007.png)
+![](Aspose.Words.a195013c-214d-430b-8255-45fc3829d4a1.007.PNG)
